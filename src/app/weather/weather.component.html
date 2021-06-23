@@ -1,0 +1,53 @@
+<div class="container">
+   
+    <div class="row">
+        <div class="col-md-6"><h1 style="position: relative;left:280px;" class="text-center my-4">KNOW YOUR WEATHER</h1>
+           
+        </div>
+        <form  [formGroup]="weatherSearchForm " (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" > 
+           
+        <div class="form-group">
+                <input class="form-control" type="text"
+                id="weatherLocation"
+                aria-describedby="weatherLocatio"
+                placeholder="Search the weather by City/Place"
+                formControlName="location"
+                />
+                <button type="submit" id="w-button"class="btn btn-success btn-md">Search for the weather</button>
+                
+
+        </div>
+
+        
+        
+        </form>
+ 
+        <div id="weather-details" class="col-md-6"><h3 class="text-center my-4">
+        
+            Weather Details</h3>
+        <p class="text-left ">Feels Like: {{this.weatherData?.current.feelslike}} </p>
+        <p class="text-left ">Cloud Cover:  {{this.weatherData?.current.cloudcover}} </p>
+        <p class="text-left ">Location:  {{this.weatherData?.location.name}}   </p>
+        <p class="text-left ">State:  {{this.weatherData?.location.region}}   </p>
+        <p class="text-left ">Country:  {{this.weatherData?.location.country}}   </p>
+        <p class="text-left ">Latitude:  {{this.weatherData?.location.lat}}   </p> 
+        <p class="text-left ">Longitude:  {{this.weatherData?.location.lon}}   </p>
+     
+       
+      
+        </div>
+        <div id="weather-details" class="col-md-6"><h3 class="text-center my-4">
+        
+            Weather & Wind Data</h3>
+      
+        <p class="text-left ">Weather Description:  {{this.weatherData?.current.weather_descriptions}}   </p>
+        <p class="text-left ">UV-Index:  {{this.weatherData?.current.uv_index}}   </p>
+        <p class="text-left ">Visibility:  {{this.weatherData?.current.visibility}}   </p>
+        <p class="text-left ">Wind Degree:  {{this.weatherData?.current.wind_degree}}   </p>
+        <p class="text-left ">Wind Direction:  {{this.weatherData?.current.wind_dir}}   </p>
+        <p class="text-left ">Wind Speed:  {{this.weatherData?.current.wind_speed}} km/ph  </p>
+       
+      
+        </div>
+    </div>
+</div>

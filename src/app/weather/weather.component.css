@@ -1,0 +1,41 @@
+
+#weather-details{
+    position: relative;
+    left:160px;
+    
+    margin-top: 30px;
+    margin:10px;
+    height:450px;
+    width: 450px;
+    padding:40px;
+    font-size: 130%;
+    border-radius: 10px;
+    text-align: left;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    
+}
+#weatherLocation{
+    width:800px;
+    background-color: white;
+    border:3px solid skyblue;
+    position: relative;
+    left:200px;
+
+}
+.container{
+    background-image: url("https://images.unsplash.com/photo-1559766223-22c209bf5309?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=891&q=80");
+    background-size: cover;
+  
+    max-width: inherit;
+    max-height: inherit;
+}
+.text-left{
+    color:white;
+
+}
+#w-button{
+    position: relative;
+    left:500px;
+    margin-top: 10px;
+}
+
